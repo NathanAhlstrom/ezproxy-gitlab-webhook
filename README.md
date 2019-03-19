@@ -41,3 +41,8 @@ ProxyPassReverse /hooks http://localhost:9000/hooks
 ```
 
 4. On your Linux/BSD/Unix flavor set this webhook service to run on startup.
+5. Start manually by running:
+```bash
+	$ [sudo] /opt/ezproxy-webhook/webhook.sh start
+```
+
