@@ -7,7 +7,7 @@ print "hi";
 ##
 ## This script is run on-demand using GitLab webhooks "Push Event";
 ## 
-## author: Cameron Moore <cmoore@hsutx.edu>
+## author: Cameron Moore
 ## 
 ## From ezproxy listserv: 
 ## thread: https://ls.suny.edu/read/messages?id=3498638
@@ -24,7 +24,7 @@ my $LOCAL_DIR  = '/opt/ezproxy';
 my $SERVICE    = 'ezproxy';
 
 ## Commands
-my $GIT       = "/opt/pkg/bin/git --git-dir=$LOCAL_DIR/.git --work-tree=$LOCAL_DIR";
+my $GIT       = "git --git-dir=$LOCAL_DIR/.git --work-tree=$LOCAL_DIR";
 my $GIT_LOG   = "log -1 --format=%H";
 my $MAILX     = '/bin/mailx';
 my $SYSTEMCTL = '/sbin/service';
