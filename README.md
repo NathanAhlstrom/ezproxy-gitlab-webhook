@@ -15,9 +15,12 @@
 ``` bash
 	$ [sudo] git clone https://github.com/NathanAhlstrom/ezproxy-gitlab-webhook.git /opt/ezproxy-webhook
 ```
-
-2. Configure by updating /opt/ezproxy-webhook/config.js to include your webhook token, repository names, etc.
-3. Setup Apache to proxy these webhook requests:
+2. Install underscore into the ezproxy-webhook directory:
+```bash
+	$ [sudo] npm install underscore
+```
+3. Configure by updating /opt/ezproxy-webhook/config.js to include your webhook token, repository names, etc.
+4. Setup Apache to proxy these webhook requests:
 
 ``` apache
 ProxyRequests Off
@@ -40,8 +43,8 @@ ProxyPass /hooks        http://localhost:9000/hooks
 ProxyPassReverse /hooks http://localhost:9000/hooks
 ```
 
-4. On your Linux/BSD/Unix flavor set this webhook service to run on startup.
-5. Start manually by running:
+5. On your Linux/BSD/Unix flavor set this webhook service to run on startup.
+6. Start manually by running:
 ```bash
 	$ [sudo] /opt/ezproxy-webhook/webhook.sh start
 ```
