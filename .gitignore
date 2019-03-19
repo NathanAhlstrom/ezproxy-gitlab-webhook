@@ -1,0 +1,6 @@
+npm-debug.log
+git-pull.pl
+logs
+logs/*
+node_modules
+node_modules/*
